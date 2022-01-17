@@ -1,0 +1,30 @@
+<h1>Recherche d'une chambre </h1>
+<form action="" method="POST">
+    Recherche : <input type="text" name="input_recherche"/>
+    <input type="submit" name="rechercher" value="Rechercher"/>
+</form>
+{% if chambres is empty %}
+    Aucune chambre trouvée
+{% else %}
+    <table border="1" >
+        <tr>
+            <th>id </th>
+            <th>Prix</th>
+            <th>Disponibilite</th>
+            <th>Type chambre</th>
+            <th>Nombre de lit</th>
+            <th>Numéro chambre  </th>
+        </tr>
+        {% for chambre in chambres %}
+            <tr>
+                <td>{{ chambre.id }}</td>
+                <td>{{ chambre.prix }}</td>
+                <td>{{ chambre.disponibilite }}</td>
+                <td>{{ chambre.typeChambre }}</td>
+                <td>{{ chambre.nombreDeLit }}</td>
+                <td>{{ chambre.numChambre }}</td>
+
+            </tr>
+        {% endfor %}
+    </table>
+{% endif %}

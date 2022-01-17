@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} HotelBundle\Login\login {% endblock %}
+{% block body %}
+  <div class="panel panel_success">
+    <div class="panel-heading">
+      <h3>Login</h3>
+    </div>
+    <div class="panel-body">
+      <form action="{{ path('Login/login') }}" method="post">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" class="form-control" value="{{ username }}">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="text" name="password" id="password" class="form-control" >
+        </div>
+        <button class="btn btn-info pull-right" >Connect</button>
+        {{ form_widget(UserType) }}
+      </form>
+
+    </div>
+
+  </div>
+
+{% endblock %}

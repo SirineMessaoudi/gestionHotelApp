@@ -1,0 +1,100 @@
+Hotel_homepage:
+    path:     /index
+    defaults: { _controller: HotelBundle:Default:index }
+
+Hotel_affichage_client:
+    path: /listClient
+    defaults: { _controller: HotelBundle:Client:list }
+Hotel_ajout_client:
+    path: /ajouterClient
+    defaults: { _controller: HotelBundle:Client:ajouter }
+Hotel_supprimer_client:
+    path: /supprimerClient/{id}
+    defaults: { _controller: HotelBundle:Client:supprimer }
+Hotel_modifier_client:
+    path: /modifierClient/{id}
+    defaults: { _controller: HotelBundle:Client:modifier }
+Hotel_recherche_client:
+    path: /rechercherClient
+    defaults: { _controller: HotelBundle:Client:recherche }
+
+Hotel_affichage_hotelier:
+    path: /listHotelier
+    defaults: { _controller: HotelBundle:Hotelier:list }
+Hotel_ajout_hotelier:
+    path: /ajouterHotelier
+    defaults: { _controller: HotelBundle:Hotelier:ajouter }
+Hotel_supprimer_hotelier:
+    path: /supprimerHotelier/{id}
+    defaults: { _controller: HotelBundle:Hotelier:supprimer }
+Hotel_modifier_hotelier:
+    path: /modifierHotelier/{id}
+    defaults: { _controller: HotelBundle:Hotelier:modifier }
+Hotel_recherche_hotelier:
+    path: /rechercherHotelier
+    defaults: { _controller: HotelBundle:Hotelier:recherche }
+
+Hotel_affichage_administrateur:
+    path: /listAdministrateur
+    defaults: { _controller: HotelBundle:Administrateur:list }
+Hotel_ajout_administrateur:
+    path: /ajouterAdministrateur
+    defaults: { _controller: HotelBundle:Administrateur:ajouter }
+Hotel_supprimer_administrateur:
+    path: /supprimerAdministrateur/{id}
+    defaults: { _controller: HotelBundle:Administrateur:supprimer }
+Hotel_modifier_administrateur:
+    path: /modifierAdministrateur/{id}
+    defaults: { _controller: HotelBundle:Administrateur:modifier }
+Hotel_recherche_administrateur:
+    path: /rechercherAdministrateur
+    defaults: { _controller: HotelBundle:Administrateur:recherche }
+
+Hotel_affichage_chambre:
+    path: /listChambre
+    defaults: { _controller: HotelBundle:Chambre:list }
+Hotel_ajout_chambre:
+    path: /ajouterChambre
+    defaults: { _controller: HotelBundle:Chambre:ajouter }
+Hotel_supprimer_chambre:
+    path: /supprimerChambre/{id}
+    defaults: { _controller: HotelBundle:Chambre:supprimer }
+Hotel_modifier_chambre:
+    path: /modifierChambre/{id}
+    defaults: { _controller: HotelBundle:Chambre:modifier }
+Hotel_recherche_chambre:
+    path: /rechercherChambre
+    defaults: { _controller: HotelBundle:Chambre:recherche }
+
+Hotel_affichage_reservation:
+    path: /listReservation
+    defaults: { _controller: HotelBundle:Reservation:list }
+Hotel_ajout_Reservation:
+    path: /ajouterReservation
+    defaults: { _controller: HotelBundle:Reservation:ajouter }
+Hotel_supprimer_reservation:
+    path: /supprimerReservation/{id}
+    defaults: { _controller: HotelBundle:Reservation:supprimer }
+Hotel_modifier_reservation:
+    path: /modifierReservation/{id}
+    defaults: { _controller: HotelBundle:Reservation:modifier }
+Hotel_recherche_reservation:
+    path: /rechercherReservation
+    defaults: { _controller: HotelBundle:Reservation:recherche }
+
+Hotel_register:
+    path: /register
+    defaults: { _controller: HotelBundle:Register:register }
+
+Hotel_login:
+    path: /login
+    defaults: { _controller: HotelBundle:Login:login }
+
+
+Hotel_booking:
+    path: /booking
+    defaults: { _controller: HotelBundle:Reservation:book }
+
+
+
+

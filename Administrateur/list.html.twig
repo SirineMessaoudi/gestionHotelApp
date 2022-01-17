@@ -1,0 +1,29 @@
+<h1>Liste des administrateurs</h1>
+<table border="1">
+    <tr>
+        <td>id</td>
+        <td>Nom</td>
+        <td>Prenom</td>
+        <td>Fonction</td>
+        <td>Sexe</td>
+        <td>Service</td>
+        <td>Téléphone</td>
+        <td>Email</td>
+        <td>Modifier</td>
+        <td>Supprimer</td>
+    </tr>
+    {% for administrateur in administrateurs %}
+        <tr>
+            <td>{{ administrateur.id }}</td>
+            <td>{{ administrateur.nom }}</td>
+            <td>{{ administrateur.prenom }}</td>
+            <td>{{ administrateur.fonction }}</td>
+            <td>{{ administrateur.sexe }}</td>
+            <td>{{ administrateur.service }}</td>
+            <td>{{ administrateur.tel }}</td>
+            <td>{{ administrateur.email}}</td>
+            <td><a href="{{ path ("Hotel_supprimer_administrateur",{'id':administrateur.id}) }} ">Supprimer </a></td>
+            <td><a href="{{ path ("Hotel_modifier_administrateur",{'id':administrateur.id}) }} ">Modifier </a></td>
+        </tr>
+    {% endfor %}
+</table>

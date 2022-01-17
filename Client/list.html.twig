@@ -1,0 +1,31 @@
+<h1>Liste des clients</h1>
+<table border="1">
+    <tr>
+        <td>id</td>
+        <td>Nom</td>
+        <td>Prenom</td>
+        <td>Adresse</td>
+        <td>Ville</td>
+        <td>Code Postal</td>
+        <td>Pays</td>
+        <td>Téléphone</td>
+        <td>Email</td>
+        <td>Modifier</td>
+        <td>Supprimer</td>
+    </tr>
+    {% for client in clients %}
+        <tr>
+            <td>{{ client.id }}</td>
+            <td>{{ client.nom }}</td>
+            <td>{{ client.prenom }}</td>
+            <td>{{ client.adresse }}</td>
+            <td>{{ client.ville }}</td>
+            <td>{{ client.codePostal }}</td>
+            <td>{{ client.pays }}</td>
+            <td>{{ client.tel}}</td>
+            <td>{{ client.email }}</td>
+            <td><a href="{{ path ("Hotel_supprimer_client",{'id':client.id}) }} ">Supprimer </a></td>
+            <td><a href="{{ path ("Hotel_modifier_client",{'id':client.id}) }} ">Modifier </a></td>
+        </tr>
+    {% endfor %}
+</table>

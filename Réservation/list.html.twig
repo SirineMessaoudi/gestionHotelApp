@@ -1,0 +1,26 @@
+<h1>Liste des réservations</h1>
+<table border="1">
+    <tr>
+        <td>id</td>
+        <td>Code Reservation</td>
+        <td>Date Reservation</td>
+        <td>Date Arrivé</td>
+        <td>Date Départ</td>
+
+        <td>Modifier</td>
+        <td>Supprimer</td>
+    </tr>
+    {% for reservation in reservations %}
+        <tr>
+            <td>{{ reservation.id }}</td>
+            <td>{{ reservation.codeReservation }}</td>
+            <td>{{ reservation.dateReservation }}</td>
+            <td>{{ reservation.dateArrive }}</td>
+            <td>{{ reservation.dateDepart }}</td>
+
+            <td><a href="{{ path ("Hotel_supprimer_reservation",{'id':reservation.id}) }} ">Supprimer </a></td>
+            <td><a href="{{ path ("Hotel_modifier_reservation",{'id':reservation.id}) }} ">Modifier </a></td>
+
+        </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,19 @@
+<h1>Liste des hoteliers</h1>
+<table border="1">
+    <tr>
+        <td>id</td>
+        <td>Nom</td>
+        <td>Prenom</td>
+        <td>Modifier</td>
+        <td>Supprimer</td>
+    </tr>
+    {% for hotelier in hoteliers %}
+        <tr>
+            <td>{{ hotelier.id }}</td>
+            <td>{{ hotelier.nom }}</td>
+            <td>{{ hotelier.prenom }}</td>
+            <td><a href="{{ path ("Hotel_supprimer_hotelier",{'id':hotelier.id}) }} ">Supprimer </a></td>
+            <td><a href="{{ path ("Hotel_modifier_hotelier",{'id':hotelier.id}) }} ">Modifier </a></td>
+        </tr>
+    {% endfor %}
+</table>

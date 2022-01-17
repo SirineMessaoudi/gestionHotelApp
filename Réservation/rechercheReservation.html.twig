@@ -1,0 +1,28 @@
+<h1>Recherche d'une réservation </h1>
+<form action="" method="POST">
+    Recherche : <input type="text" name="input_recherche"/>
+    <input type="submit" name="rechercher" value="Rechercher"/>
+</form>
+{% if reservations is empty %}
+    Aucune réservation trouvée
+{% else %}
+    <table border="1" >
+        <tr>
+            <th>id Reservation</th>
+            <th>Code Reservation</th>
+            <th>Date Reservation</th>
+            <th>Date Départ</th>
+            <th>Date Arrivé</th>
+        </tr>
+        {% for reservation in reservations %}
+            <tr>
+                <td>{{ reservation.id }}</td>
+                <td>{{ reservation.codeReservation }}</td>
+                <td>{{ reservation.dateReservation }}</td>
+                <td>{{ reservation.dateArrive }}</td>
+                <td>{{ reservation.dateDepart }}</td>
+
+            </tr>
+        {% endfor %}
+    </table>
+{% endif %}

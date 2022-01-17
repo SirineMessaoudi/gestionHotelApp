@@ -1,0 +1,28 @@
+<h1>Liste des chambres</h1>
+<table border="1">
+    <tr>
+        <td>id</td>
+        <td>Prix</td>
+        <td>Disponibilité</td>
+        <td>Type Chambre</td>
+        <td>Nombre de lit</td>
+        <td>Numéro Chambre</td>
+
+        <td>Modifier</td>
+        <td>Supprimer</td>
+    </tr>
+    {% for chambre in chambres %}
+        <tr>
+            <td>{{ chambre.id }}</td>
+            <td>{{ chambre.prix }}</td>
+            <td>{{ chambre.disponibilite }}</td>
+            <td>{{ chambre.typeChambre }}</td>
+            <td>{{ chambre.nombreDeLit }}</td>
+            <td>{{ chambre.numChambre }}</td>
+
+            <td><a href="{{ path ("Hotel_supprimer_chambre",{'id':chambre.id}) }} ">Supprimer </a></td>
+            <td><a href="{{ path ("Hotel_modifier_chambre",{'id':chambre.id}) }} ">Modifier </a></td>
+
+        </tr>
+    {% endfor %}
+</table>
